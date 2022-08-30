@@ -1,0 +1,32 @@
+from cProfile import label
+from tkinter import *
+root=Tk()
+root.geometry("500x300")
+
+def getvals():
+    print("Accepted")
+
+Label(root, text="Registration form for the Employee",font="arial 15 bold").grid(row=0, column=3)
+
+employeeid=Label(root, text="Enter the id of the Employee")
+name=Label(root, text="Name of the Employee")
+phone=Label(root, text="Enter the phone number of the Employee")
+
+employeeid.grid(row=1,column=1)
+name.grid(row=2,column=1)
+phone.grid(row=3,column=1)
+
+employeeidvalue=IntVar
+namevalue=StringVar
+phonevalue=StringVar
+
+identry = Entry(root, textvariable= employeeidvalue)
+nameentry = Entry(root, textvariable= namevalue)
+phoneentry = Entry(root, textvariable= phonevalue)
+
+identry.grid(row=1,column=3)
+nameentry.grid(row=2,column=3)
+phoneentry.grid(row=3,column=3)
+
+Button(text="Submit",command=getvals).grid(row=5,column=3)
+root.mainloop()
